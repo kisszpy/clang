@@ -9,4 +9,8 @@
 /Users/kisszpy/CLionProjects/clang/main.cpp
 iostream
 -
+thread
+-
+string
+-
 
