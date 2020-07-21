@@ -6,7 +6,9 @@
 #include <string>
 #include <vector>
 #include <array>
+#include <fstream>
 
+typedef int myint;
 using namespace std;
 
 struct Person {
@@ -37,16 +39,13 @@ enum Color {
 
 
 int main() {
-    vector<int> nums(20);
-    for (int j = 0; j < nums.size(); ++j) {
-        nums[j] = 100 + j;
-    }
-    for (int i = 0; i < nums.size(); ++i) {
-        cout << nums[i] << endl;
-    }
-    array<int,20> array = {1,3,5,7};
-    for(vector<int>::iterator iterator = nums.begin(); iterator!=nums.end();iterator++) {
-        cout<< "value is : \t" << *iterator << endl;
-    }
 
+    ofstream file;
+    file.open("../a.txt");
+    if (file.is_open()) {
+        for (int i = 0; i < 1; ++i) {
+            file << "hello" << i << endl;
+        }
+    }
+    file.close();
 }
