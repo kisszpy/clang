@@ -4,13 +4,15 @@
 #include <iostream>
 #include <thread>
 #include <string>
+#include <vector>
+#include <array>
 
 using namespace std;
 
 struct Person {
     int age;
-    char name[20];
-    char nickname[20];
+    char *name;
+    char *nickname;
     int score;
 };
 struct Animal {
@@ -35,10 +37,16 @@ enum Color {
 
 
 int main() {
-    cout << dog.name << endl;
-    cout << "车名：" + car.name << "\n轮胎数量：" << car.circle << endl;
-    Color c = RED;
-    cout << c << endl;
-    int car_color = BLUE;
-    cout << car_color << endl;
+    vector<int> nums(20);
+    for (int j = 0; j < nums.size(); ++j) {
+        nums[j] = 100 + j;
+    }
+    for (int i = 0; i < nums.size(); ++i) {
+        cout << nums[i] << endl;
+    }
+    array<int,20> array = {1,3,5,7};
+    for(vector<int>::iterator iterator = nums.begin(); iterator!=nums.end();iterator++) {
+        cout<< "value is : \t" << *iterator << endl;
+    }
+
 }

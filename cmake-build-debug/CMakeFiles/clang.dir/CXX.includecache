@@ -13,4 +13,8 @@ thread
 -
 string
 -
+vector
+-
+array
+-
 
