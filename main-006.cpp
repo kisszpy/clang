@@ -37,27 +37,15 @@ enum Color {
     YELLOW
 };
 
-void sample();
 
-
-int msum(int *array,int len) {
-    int sum = 0;
-    for (int i = 0; i < len; ++i) {
-        sum += array[i];
-    }
-    return sum;
-}
 int main() {
-    sample();
-    int array[] = {1,2,3};
-//    int *pa = &array[0];
-    int sum = msum(array,3);
-    cout << array << endl;
-    cout << &array[0] << endl;
-    cout << sum << endl;
-}
 
-void sample() {
-    cout << "sample" << endl;
+    ofstream file;
+    file.open("../a.txt");
+    if (file.is_open()) {
+        for (int i = 0; i < 1; ++i) {
+            file << "hello" << i << endl;
+        }
+    }
+    file.close();
 }
-
